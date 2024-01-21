@@ -99,10 +99,15 @@ function play () {
                 && birb_props.top < pipe_sprite_props.top + pipe_sprite_props.height
                 && birb_props.top + birb_props.height > pipe_sprite_props.top) {
                     game_state = 'End';
-                    message.innerHTML = 'game over LLLLLLLLLLL'.fontcolor('aquamarine') + '<br>press enter to restart';
+                    message.innerHTML = 'game over LLLLLLLLLLL'.fontcolor('aquamarine') + '<br>refresh page to restart';
                     message.classList.add('messageStyle');
                     img.style.display = 'none';
-                    return;
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key == 'Enter' && game_state != 'Play') {
+                            message.classList.remove('messageStyle');
+                            return;
+                        }
+                    })
                 }
                 else {
                     if(pipe_sprite_props.right < birb_props.left
@@ -123,10 +128,15 @@ function play () {
 
         if(birb_props.top <= 0 || birb_props.bottom >= 1000) {
             game_state = 'End';
-            message.style.left = '28vw';
-            window.location.reload();
-            message.classList.remove('messageStyle');
-            return;
+            message.innerHTML = 'game over LLLLLLLLLLL'.fontcolor('aquamarine') + '<br>refresh page to restart';
+            message.classList.add('messageStyle');
+            img.style.display = 'none';
+            document.addEventListener('keydown', (e) => {
+                if (e.key == 'Enter' && game_state != 'Play') {
+                    message.classList.remove('messageStyle');
+                    return;
+                }
+            })
         }
         birb.style.top = birb_props.top + birb_dy + 'px';
         birb_props = birb.getBoundingClientRect();
