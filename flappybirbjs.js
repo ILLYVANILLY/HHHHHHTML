@@ -46,6 +46,16 @@ function checkLogin() {
         //window.location.href = 'flappybirb.html';
         watters();
     }
+        else if (username === 'Iganjali' && password === '1ZX5') { //Iliya
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
+    else if (username === 'FATCAT' && password === 'CHONKYCAT') { //Angela
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
     else {
         loginStatus.innerHTML = 'Invalid username or password';
     }
