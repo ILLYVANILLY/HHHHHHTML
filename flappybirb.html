@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html Lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,       initial-scale=1.0">
+    <link rel = "icon" type = "image/jpg" href = "flappycat.png"/>
+    <title>supercalifragilisticexpialidocious flappycat</title>
+    <link rel = "stylesheet" href = "flappybirbstyle.css">
+    <style>
+        .contain {
+          position: relative;
+          text-align: center;
+          color: white;
+        }
+        .centered {
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-1%, -1%);
+        }
+      </style>
+    <script src = "flappybirbjs.js" defer></script>
+</head>
+<body>
+     
+    <div class="contain">
+        <div class="background">
+            <div class="score" class="centered">
+                <span class="score_title"></span>
+                <span class="score_val"></span>
+            </div>
+        </div>
+    </div>
+    <img src = "flappycat.png" alt = "img" class = "birb" id = "birb">
+    <!--<img src = "angeyviroose.png" alt = "viroose" class = "hidden viroose" id = "viroose">-->
+    <!-- Inside the <body> tag -->
+    <div id="viroose-container"></div> <!-- Add a container for viroose -->
+
+    <!-- Update the existing pill creation logic -->
+    <div class="message">
+        <div class="container">
+            <p font-size: 50px;>Login</p>
+            <form id="loginForm">
+                <label style = "font-size: 25px;" for="username">Username:</label>
+                <input style = "font-size: 25px;" type="text" id="username" name="username" required>
+                <label style = "font-size: 25px;" for="password">Password:</label>
+                <input style = "font-size: 25px;" type="password" id="password" name="password" required>
+                <button style = "font-size: 25px;" type="button" onclick="checkLogin()">Login</button>
+            </form>
+            <p style = "font-size: 25px;" id="loginStatus"></p>
+        </div>
+        <script src="flappybirbjs.js"></script>
+        <!--<p>Enter to start flappycat!!! <p><span style = "color:wheat">&uarr;</span>uparrow to control cat</p>-->
+    </div>
+</body>
+</html>
