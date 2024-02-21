@@ -81,6 +81,31 @@ function checkLogin() { //the login system... I actually need to encrypt this so
         //window.location.href = 'flappybirb.html';
         watters();
     }
+    else if (username === 'Dhar Mann' && password === 'DharManndancingcreepy') { //Ashwin
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
+    else if (username === 'username1' && password === 'iloveflappycat') { //Grace
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
+    else if (username === 'Hellowave' && password === 'Izzy/yes') { //Maddy
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
+    else if (username === 'd' && password === 'd') { //deburger
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
+    else if (username === 'beef-cheese-burge' && password === 'e.pi') { //me
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
     else { //wat ifb the username and password are incorrect combination
         loginStatus.innerHTML = 'Invalid username or password'; // it tells them so. shoves it in their face.
     }
