@@ -106,6 +106,16 @@ function checkLogin() { //the login system... I actually need to encrypt this so
         //window.location.href = 'flappybirb.html';
         watters();
     }
+    else if (username === 'waffles' && password === 'or_pancakes?') { //company
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
+    else if (username === 'Betterguy29' && password === 'Betterguy29') { //me
+        loginStatus.innerHTML = 'Login successful!';
+        //window.location.href = 'flappybirb.html';
+        watters();
+    }
     else { //wat ifb the username and password are incorrect combination
         loginStatus.innerHTML = 'Invalid username or password'; // it tells them so. shoves it in their face.
     }
