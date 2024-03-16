@@ -77,8 +77,8 @@ function checkLogin(event) { //the login system... I actually need to encrypt th
     };
 
     // Send the form data as JSON
-    var formData = JSON.stringify({ username: username, password: password });
-    xhr.send(formData);
+    //var formData = JSON.stringify({ username: username, password: password });
+    //xhr.send(formData);
 
     /*
     var response = "watt";
