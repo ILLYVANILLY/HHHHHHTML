@@ -56,7 +56,7 @@ function checkLogin(event) { //the login system... I actually need to encrypt th
     var loginStatus = document.getElementById('loginStatus');
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'process_data.php', true);
+    xhr.open('POST', 'process_form.php', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
