@@ -1,4 +1,7 @@
 <?php
+
+header("Access-Control-Allow-Origin: *");
+
 // Assuming $username and $password are the input from the login form
 
 // Establish a connection to the database
