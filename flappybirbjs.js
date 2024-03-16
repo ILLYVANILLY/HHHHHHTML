@@ -49,7 +49,7 @@ let virooseHealth = 5; //the viroose healthpoint. if it reaches 0 it dies
 
 function checkLogin(event) { //the login system... I actually need to encrypt this somehow
 
-    event.preventDefault(); // Prevent the default form submission behavior
+    //event.preventDefault(); // Prevent the default form submission behavior
 
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
