@@ -93,7 +93,7 @@ function checkLogin() { //the login system... I actually need to encrypt this so
 
 
 
-    fetch('https://illyvanilly.co/process_form.php', {
+    fetch('https://illyvanilly.co/proxywhat?url=https://illyvanilly.co/process_form.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
