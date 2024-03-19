@@ -47,7 +47,7 @@ message.classList.add('messageStyle'); //add the message to the purple rectangle
 let viroose; //the virooses
 let virooseHealth = 5; //the viroose healthpoint. if it reaches 0 it dies
 
-function checkLogin(event) { //the login system... I actually need to encrypt this somehow
+function checkLogin() { //the login system... I actually need to encrypt this somehow
 
     //event.preventDefault(); // Prevent the default form submission behavior
 
