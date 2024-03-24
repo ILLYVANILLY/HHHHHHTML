@@ -90,15 +90,13 @@ function checkLogin() { //the login system... I actually need to encrypt this so
         username: username,
         password: password
     };
-
-
-
-    fetch('https://illyvanilly.co/process_form.php', {
-        method: 'POST',
+    
+    fetch('process_form.php', {
+        method: 'POST', // Change method to 'POST'
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data) // Replace 'data' with your request data
+        body: JSON.stringify(data) // Pass data as the body of the request
     })
         .then(response => {
             if (!response.ok) {
