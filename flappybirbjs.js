@@ -85,7 +85,55 @@ function checkLogin() { //the login system... I actually need to encrypt this so
     //https://example-proxy.com/proxywhat?url=https://example.com/api/data
     //https://illyvanilly.co/proxywhat?url=https://illyvanilly.co/process_form.php
     //https://illyvanilly.co/process_form.php
+
+    console.log("placeholder");
+
+    // Event handler function for form submission
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Retrieve username and password from input fields
+    var username = document.getElementById('useusername').value;
+    var password = document.getElementById('usepassword').value;
+
+    // Prepare data object to send with fetch request
+    var data = {
+        username: username,
+        password: password
+    };
+
+    // Send fetch request to process_form.php
+    fetch('process_form.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response from PHP:', data);
+        if (data === "yay") {
+            watters();
+        } else {
+            // Handle other responses if needed
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+// Add event listener to the form
+document.getElementById('loginForm').addEventListener('submit', handleSubmit);
+
     
+    /*
     var data = {
         username: username,
         password: password
@@ -115,6 +163,7 @@ function checkLogin() { //the login system... I actually need to encrypt this so
         .catch(error => {
             console.error('Error:', error);
         });
+        */
 
 
 
