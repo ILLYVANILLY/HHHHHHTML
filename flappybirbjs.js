@@ -90,6 +90,7 @@ function checkLogin() { //the login system... I actually need to encrypt this so
 
     // Event handler function for form submission
 function handleSubmit(event) {
+    console.log("hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm");
     event.preventDefault(); // Prevent default form submission behavior
 
     // Retrieve username and password from input fields
