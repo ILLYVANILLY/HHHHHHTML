@@ -87,7 +87,7 @@ function checkLogin() { //the login system... I actually need to encrypt this so
     //https://illyvanilly.co/process_form.php
 
     console.log("placeholder");
-
+/*
     // Event handler function for form submission
 function handleSubmit(event) {
     console.log("hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm");
@@ -129,6 +129,37 @@ function handleSubmit(event) {
         console.error('Error:', error);
     });
     return;
+}
+*/
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  // Retrieve username and password from the form
+  var username = document.getElementById('useusername').value;
+  var password = document.getElementById('usepassword').value;
+
+  // Prepare data object for the fetch request
+  var data = { username: username, password: password };
+
+  // Send fetch request to process_form.php
+  fetch('process_form.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log("Response from PHP:", data);
+    if (data === "yay") {
+      watters(); // Not sure what this function does, but assuming it handles successful login
+    } else {
+      // Handle other responses if needed
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
 }
 
 // Add event listener to the form
