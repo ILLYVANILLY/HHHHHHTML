@@ -128,6 +128,7 @@ function handleSubmit(event) {
     .catch(error => {
         console.error('Error:', error);
     });
+    return;
 }
 
 // Add event listener to the form
