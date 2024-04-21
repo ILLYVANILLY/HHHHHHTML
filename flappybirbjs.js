@@ -79,8 +79,15 @@ function checkLogin() { //the login system... I actually need to encrypt this so
             const password = user[1];
             const skin = user[2];
 
+            if (entusername == username && entpassword == password) {
+                
+                loginStatus.innerHTML = 'Login successful!';
+                //window.location.href = 'flappybirb.html';
+                watters();
+            }
+
             // Do something with each user data
-            console.log(`Username: ${username}, Password: ${password}, Skin: ${skin}`);
+            //console.log(`Username: ${username}, Password: ${password}, Skin: ${skin}`);
         });
     }).catch(error => {
         // Handle errors if the promise is rejected
