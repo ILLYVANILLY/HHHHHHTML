@@ -94,6 +94,11 @@ function checkLogin() { //the login system... I actually need to encrypt this so
         console.error('Error fetching user data:', error);
     });
 
+    if (loginStatus.innerHTML != 'Login successful!') {
+        loginStatus.innerHTML = 'what :skull:';
+        console.log('what :skull:');
+    }
+
 
     //SCrapALLTHAT
 
