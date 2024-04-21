@@ -49,8 +49,8 @@ let virooseHealth = 5; //the viroose healthpoint. if it reaches 0 it dies
 
 function checkLogin() { //the login system... I actually need to encrypt this somehow
 
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+    var entusername = document.getElementById('username').value;
+    var entpassword = document.getElementById('password').value;
     var loginStatus = document.getElementById('loginStatus');
 
     async function fetchUserData() {
