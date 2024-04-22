@@ -79,6 +79,11 @@ function checkLogin() { //the login system... I actually need to encrypt this so
             const password = user[1];
             const skin = user[2];
 
+            console.log(username);
+            console.log(entusername);
+            console.log(password);
+            console.log(entpassword);
+
             if (entusername == username && entpassword == password) {
                 
                 loginStatus.innerHTML = 'Login successful!';
