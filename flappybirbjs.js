@@ -75,8 +75,10 @@ function checkLogin() { //the login system... I actually need to encrypt this so
         // Loop through userData
         userData.forEach(user => {
             // Each user is an array containing username, password, and skin
-            const username = user[0];
-            const password = user[1];
+            let useername = user[0].split(',');
+            let passsword = user[1].split(',');
+            let username = useername[1];
+            let password = passsword[1];
             const skin = user[2];
 
             console.log(username);
