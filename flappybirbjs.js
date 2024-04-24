@@ -86,7 +86,7 @@ function checkLogin() { //the login system... I actually need to encrypt this so
             console.log(password);
             console.log(entpassword);
 
-            if (entusername == username && entpassword == password) {
+            if (" " + entusername == username && " " + entpassword == password) {
                 
                 loginStatus.innerHTML = 'Login successful!';
                 //window.location.href = 'flappybirb.html';
