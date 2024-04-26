@@ -5,6 +5,9 @@ let viroose_move_speed = 0.7 //viroose moves @ this speef
 let birb = document.querySelector('.birb'); //birb sprite
 let img = document.getElementById('birb'); //birb imaeg
 
+let entusername = "";
+let entpassword = "";
+
 let birb_props = birb.getBoundingClientRect(); //bird dimensioons/bounds
 let many_pill_props = []; // the pill dimensions/bounds. don't ask
 let many_viroose_props = []; // the viroose dimensions/bounds. don't ask
@@ -49,8 +52,8 @@ let virooseHealth = 5; //the viroose healthpoint. if it reaches 0 it dies
 
 function checkLogin() { //the login system... I actually need to encrypt this somehow
 
-    var entusername = document.getElementById('username').value;
-    var entpassword = document.getElementById('password').value;
+    entusername = document.getElementById('username').value;
+    entpassword = document.getElementById('password').value;
     var loginStatus = document.getElementById('loginStatus');
 
     async function fetchUserData() {
@@ -120,6 +123,8 @@ function watters() { //actual game code! how far have we come
                 e.remove(); //remove it
             })
             img.style.display = 'block'; //show the birb
+            let cskin = skin[1].substring(1, skin[1].length) + ".png";
+            img.src = cskin;
             birb.style.top = '40vh'; //birb y location
             game_state = 'Play'; //game is playing
             message.innerHTML = ''; //remove the message
