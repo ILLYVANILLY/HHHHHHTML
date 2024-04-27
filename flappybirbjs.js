@@ -7,6 +7,7 @@ let img = document.getElementById('birb'); //birb imaeg
 
 let entusername = "";
 let entpassword = "";
+let costkin = "";
 
 let birb_props = birb.getBoundingClientRect(); //bird dimensioons/bounds
 let many_pill_props = []; // the pill dimensions/bounds. don't ask
@@ -92,6 +93,7 @@ function checkLogin() { //the login system... I actually need to encrypt this so
             if (" " + entusername == username && " " + entpassword == password) {
                 
                 loginStatus.innerHTML = 'Login successful!';
+                costkin = skin[1].substring(1, skin[1].length) + ".png"
                 //window.location.href = 'flappybirb.html';
                 watters();
             }
@@ -123,8 +125,7 @@ function watters() { //actual game code! how far have we come
                 e.remove(); //remove it
             })
             img.style.display = 'block'; //show the birb
-            let cskin = skin[1].substring(1, skin[1].length) + ".png";
-            img.src = cskin;
+            img.src = costkin;
             birb.style.top = '40vh'; //birb y location
             game_state = 'Play'; //game is playing
             message.innerHTML = ''; //remove the message
