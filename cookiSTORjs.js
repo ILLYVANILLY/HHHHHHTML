@@ -41,6 +41,7 @@ function checkLoging() { //the login system... I actually need to encrypt this s
                 
                 const cookii = user[3].split(', ');
                 cooki = Number(cookii[1]);
+                numbaofcooki.innerHTML = 'you have COOKED ' + cooki + ' number of flappycooki.';
                 //window.location.href = 'flappybirb.html';
             }
             
