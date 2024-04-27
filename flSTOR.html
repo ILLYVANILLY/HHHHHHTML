@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html Lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,       initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="flappycat.png" />
+    <title>supercalifragilisticexpialidocious flappycat</title>
+    <link rel="stylesheet" href="flSTORcss.css">
+    <style>
+        .contain {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .centered {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-1%, -1%);
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 0px solid #dddddd;
+            text-align: middle;
+            padding: 8px;
+        }
+    </style>
+    <script src="flSTORjs.js" defer></script>
+</head>
+
+<body>
+
+    <div class="background">
+    </div>
+
+    <!-- Update the existing pill creation logic -->
+    <div class="message">
+        <div class="container">
+            <p font-size: 50px;>COOK</p>
+            <p id="numbaofcooki" style="font-size: 25px;">you have COOKED x amounts of flappychocolat.</p>
+            <form id="loginForm">
+                <label style="font-size: 25px;" for="username">Username:</label>
+                <input style="font-size: 25px;" type="usernamee" id="usernamee" name="usernamee" required>
+                <label style="font-size: 25px;" for="password">Password:</label>
+                <input style="font-size: 25px;" type="password" id="passwordd" name="passwordd" required>
+                <button style="font-size: 25px;" type="button" onclick="checkLoging()">Login</button>
+            </form>
+            <p style="font-size: 25px;" id="loginStatoos"></p>
+        </div>
+        <table style="font-size: 25px; color:black; width:3000">
+            <tr>
+                <th style="width:1000;">Flappycat</th>
+                <th style="width:1000;">Pusheencat</th>
+                <th style="width:1000;">Harrycat</th>
+            </tr>
+            <tr>
+                <th style="width:1000;">Percycat</th>
+                <th style="width:1000;">Messicat</th>
+                <th style="width:1000;">Ronaldocat</th>
+            </tr>
+            <tr>
+                <th style="width:1000;">Pancakecat</th>
+                <th style="width:1000;">Waffleycat</th>
+                <th style="width:1000;">Pizzacat</th>
+            </tr>
+        </table>
+        <script src="flSTORjs.js"></script>
+        <!--<p>Enter to start flappycat!!! <p><span style = "color:wheat">&uarr;</span>uparrow to control cat</p>-->
+    </div>
+</body>
+
+</html>
